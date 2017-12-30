@@ -3,8 +3,9 @@ import { Router, Route, Switch } from 'dva/router';
 import fetch from 'dva/fetch';
 import React from 'react';
 import styles from './index.less';
-import request from './utils/request'
-
+import request from './utils/request';
+import {Button} from 'antd-mobile';
+import 'antd-mobile/lib/button/style/css';
 // 1. Initialize
 const app = dva();
 
@@ -54,6 +55,7 @@ const CountApp = ({count,dispatch}) =>{
       <div className={styles.button}>
         <button onClick={() =>{dispatch({type:'count/query'});}}>+</button>
       </div>
+      <Button>hah</Button>
     </div>
   );
 };
