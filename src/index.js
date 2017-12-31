@@ -5,7 +5,10 @@ import React from 'react';
 import styles from './index.less';
 import request from './utils/request';
 import {Button} from 'antd-mobile';
-import 'antd-mobile/lib/button/style/css';
+import SearchBarExample from './routes/SearchBarExample'
+import TabBarExample from './routes/TabBarExample'
+
+// import 'antd-mobile/lib/button/style/css';
 // 1. Initialize
 const app = dva();
 
@@ -56,6 +59,8 @@ const CountApp = ({count,dispatch}) =>{
         <button onClick={() =>{dispatch({type:'count/query'});}}>+</button>
       </div>
       <Button>hah</Button>
+      <SearchBarExample/>
+      <TabBarExample></TabBarExample>
     </div>
   );
 };
